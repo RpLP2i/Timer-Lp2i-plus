@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    transition: background-color 0.5s ease;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Prend toute la largeur */
+    max-width: 1200px; /* Limite la largeur maximale */
+    margin: 0 20px;
+}
+
+.inner-container {
+    background-color: #4CAF50; /* Vert par défaut pour le travail */
+    padding: 50px;
+    border-radius: 10px;
+    color: white; /* Texte en blanc */
+    transition: background-color 0.5s ease;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: white; /* Texte en blanc */
+}
+
+.settings {
+    display: flex;
+    flex-wrap: wrap; /* Pour gérer les nombreux champs */
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.settings div {
+    margin: 10px;
+}
+
+.settings label {
+    display: block;
+    margin-bottom: 5px;
+    color: white; /* Texte en blanc */
+}
+
+.settings input[type="number"] {
+    width: 80px; /* Réduire la largeur des sélecteurs */
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 16px;
+}
+
+.timer {
+    font-size: 200px; /* Très grand chrono */
+    margin-bottom: 20px;
+    color: white; /* Texte en blanc */
+}
+
+.status {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: white; /* Texte en blanc */
+}
+
+.rounds-remaining,
+.series-remaining {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: white; /* Texte en blanc */
+}
+
+.buttons button {
+    font-size: 22px;
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#start {
+    background-color: #28a745; /* Changer la couleur du bouton pour mieux contraster */
+    color: white;
+}
+
+#stop {
+    background-color: #dc3545;
+    color: white;
+}
+
+#reset {
+    background-color: #ffc107;
+    color: white;
+}
+
+.logo {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 130px; /* Taille du logo */
+    height: auto;
+    z-index: 10;
+    border-radius: 15px; /* Arrondir les coins */
+}
+
+/* Media queries pour les petits écrans */
+@media (max-width: 767px) {
+    .container {
+        padding: 20px;
+    }
+
+    .timer {
+        font-size: 100px; /* Réduire la taille du chrono sur mobile */
+    }
+
+    .settings {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .settings input[type="number"] {
+        width: 60px;
+    }
+
+    .buttons button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
