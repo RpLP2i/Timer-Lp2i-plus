@@ -11,31 +11,27 @@ body {
 
 .container {
     text-align: center;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.8); /* Blanc avec légère transparence */
+    background-image: url('background-image.jpg'); /* Remplacez par votre chemin d'image */
+    background-size: cover; /* Adapter l'image à la taille du conteneur */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+    background-position: center; /* Centrer l'image */
     padding: 50px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 100%; /* Prend toute la largeur */
-    max-width: 1200px; /* Limite la largeur maximale */
+    width: 100%;
+    max-width: 1200px;
     margin: 0 20px;
-}
-
-.inner-container {
-    background-color: #4CAF50; /* Vert par défaut pour le travail */
-    padding: 50px;
-    border-radius: 10px;
-    color: white; /* Texte en blanc */
-    transition: background-color 0.5s ease;
 }
 
 h1 {
     margin-bottom: 20px;
-    color: white; /* Texte en blanc */
+    color: white;
 }
 
 .settings {
     display: flex;
-    flex-wrap: wrap; /* Pour gérer les nombreux champs */
+    flex-wrap: wrap;
     justify-content: space-around;
     margin-bottom: 20px;
 }
@@ -47,11 +43,11 @@ h1 {
 .settings label {
     display: block;
     margin-bottom: 5px;
-    color: white; /* Texte en blanc */
+    color: white;
 }
 
 .settings input[type="number"] {
-    width: 80px; /* Réduire la largeur des sélecteurs */
+    width: 80px;
     padding: 5px;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -60,22 +56,22 @@ h1 {
 }
 
 .timer {
-    font-size: 200px; /* Très grand chrono */
+    font-size: 200px;
     margin-bottom: 20px;
-    color: white; /* Texte en blanc */
+    color: white;
 }
 
 .status {
     font-size: 30px;
     margin-bottom: 20px;
-    color: white; /* Texte en blanc */
+    color: white;
 }
 
 .rounds-remaining,
 .series-remaining {
     font-size: 24px;
     margin-bottom: 10px;
-    color: white; /* Texte en blanc */
+    color: white;
 }
 
 .buttons button {
@@ -88,17 +84,17 @@ h1 {
 }
 
 #start {
-    background-color: #28a745; /* Changer la couleur du bouton pour mieux contraster */
+    background-color: #4CAF50;
     color: white;
 }
 
 #stop {
-    background-color: #dc3545;
+    background-color: #f44336;
     color: white;
 }
 
 #reset {
-    background-color: #ffc107;
+    background-color: #ff9800;
     color: white;
 }
 
@@ -106,33 +102,8 @@ h1 {
     position: absolute;
     top: 2px;
     right: 2px;
-    width: 130px; /* Taille du logo */
+    width: 130px;
     height: auto;
     z-index: 10;
-    border-radius: 15px; /* Arrondir les coins */
-}
-
-/* Media queries pour les petits écrans */
-@media (max-width: 767px) {
-    .container {
-        padding: 20px;
-    }
-
-    .timer {
-        font-size: 100px; /* Réduire la taille du chrono sur mobile */
-    }
-
-    .settings {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .settings input[type="number"] {
-        width: 60px;
-    }
-
-    .buttons button {
-        width: 100%;
-        margin-bottom: 10px;
-    }
+    border-radius: 15px;
 }
